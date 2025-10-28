@@ -4,9 +4,9 @@ Garden Advice App - Provides gardening tips based on month and season
 A simple application for gardening enthusiasts around the world
 """
 
-# TODO: Create separate functions for each season's advice instead of having everything in one place
-# TODO: Add proper documentation with docstrings for all functions
 # TODO: Consider adding plant-specific advice based on region/climate
+# TODO: Add weather-based recommendations
+# TODO: Implement user preferences for gardening zones
 
 # Season mapping dictionary for better maintainability
 SEASON_MAPPING = {
@@ -68,6 +68,34 @@ SEASONAL_ADVICE = {
     }
 }
 
+def winter_advice():
+    """Provide winter gardening advice and tips"""
+    season_data = SEASONAL_ADVICE["Winter"]
+    print(f"\n{season_data['emoji']}  Winter Gardening Tips:")
+    for tip in season_data['tips']:
+        print(f"- {tip}")
+
+def spring_advice():
+    """Provide spring gardening advice and tips"""
+    season_data = SEASONAL_ADVICE["Spring"]
+    print(f"\n{season_data['emoji']}  Spring Gardening Tips:")
+    for tip in season_data['tips']:
+        print(f"- {tip}")
+
+def summer_advice():
+    """Provide summer gardening advice and tips"""
+    season_data = SEASONAL_ADVICE["Summer"]
+    print(f"\n{season_data['emoji']}  Summer Gardening Tips:")
+    for tip in season_data['tips']:
+        print(f"- {tip}")
+
+def fall_advice():
+    """Provide fall gardening advice and tips"""
+    season_data = SEASONAL_ADVICE["Fall"]
+    print(f"\n{season_data['emoji']}  Fall Gardening Tips:")
+    for tip in season_data['tips']:
+        print(f"- {tip}")
+
 def get_season_advice():
     """Get general seasonal gardening advice based on month input"""
     print("=== Garden Advice App ===")
@@ -81,13 +109,17 @@ def get_season_advice():
             print("❌ Please enter a valid month between 1 and 12!")
             return
             
-        # Get season from mapping dictionary
+        # Get season from mapping dictionary and call appropriate function
         season = SEASON_MAPPING[month]
-        season_data = SEASONAL_ADVICE[season]
         
-        print(f"\n{season_data['emoji']}  {season} Gardening Tips:")
-        for tip in season_data['tips']:
-            print(f"- {tip}")
+        if season == "Winter":
+            winter_advice()
+        elif season == "Spring":
+            spring_advice()
+        elif season == "Summer":
+            summer_advice()
+        else:  # Fall
+            fall_advice()
             
     except ValueError:
         print("❌ Please enter a valid number between 1 and 12!")
