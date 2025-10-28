@@ -1,0 +1,14 @@
+GitHub Repository Link:
+https://github.com/Elton166/garden-app
+
+This repository contains:
+- garden_advice.py: Main application file with seasonal and monthly gardening advice
+- README.md: Project documentation
+- repo.txt: This file with the repository link
+
+The project demonstrates:
+- Git workflow with branches and commits
+- Code refactoring and improvement
+- Issue tracking and resolution
+- Pull request workflow
+- Clean, maintainable Python code with proper documentation
