@@ -4,8 +4,6 @@ Garden Advice App - Provides gardening tips based on month and season
 A simple application for gardening enthusiasts around the world
 """
 
-# TODO: Create separate functions for each season's advice instead of having everything in one place
-# TODO: Add proper documentation with docstrings for all functions
 # TODO: Consider adding plant-specific advice based on region/climate
 
 # Season mapping dictionary for better maintainability
