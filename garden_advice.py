@@ -4,53 +4,63 @@ Garden Advice App - Provides gardening tips based on month and season
 A simple application for gardening enthusiasts around the world
 """
 
-# TODO: Create separate functions for each season's advice instead of having everything in one place
-# TODO: Add proper documentation with docstrings for all functions
 # TODO: Replace hardcoded month numbers with a more maintainable approach (maybe use a dictionary)
 # TODO: Add more detailed advice for each month
 # TODO: Consider adding plant-specific advice based on region/climate
 
+def winter_advice():
+    """Provide winter gardening advice and tips"""
+    print("\n🌨️  Winter Gardening Tips:")
+    print("- Plan your garden for next year")
+    print("- Order seeds from catalogs")
+    print("- Maintain your tools")
+    print("- Protect plants from frost")
+    print("- Start indoor herb gardens")
+
+def spring_advice():
+    """Provide spring gardening advice and tips"""
+    print("\n🌱  Spring Gardening Tips:")
+    print("- Start planting cool-season crops")
+    print("- Prepare soil by adding compost")
+    print("- Begin seed starting indoors")
+    print("- Prune fruit trees")
+    print("- Clean up winter debris")
+
+def summer_advice():
+    """Provide summer gardening advice and tips"""
+    print("\n☀️  Summer Gardening Tips:")
+    print("- Water regularly, especially in morning")
+    print("- Harvest vegetables and herbs")
+    print("- Deadhead flowers for continued blooming")
+    print("- Watch for pests and diseases")
+    print("- Plant heat-tolerant varieties")
+
+def fall_advice():
+    """Provide fall gardening advice and tips"""
+    print("\n🍂  Fall Gardening Tips:")
+    print("- Plant cool-season vegetables")
+    print("- Collect and save seeds")
+    print("- Rake and compost fallen leaves")
+    print("- Plant spring-flowering bulbs")
+    print("- Prepare garden beds for winter")
+
 def get_season_advice():
-    """Get general seasonal gardening advice"""
+    """Get general seasonal gardening advice based on month input"""
     print("=== Garden Advice App ===")
     print("Welcome to your personal gardening assistant!")
     
     # Get current month from user
     month = int(input("Enter the current month (1-12): "))
     
-    # TODO: This should be refactored into separate functions
+    # Call appropriate seasonal function based on month
     if month in [12, 1, 2]:
-        season = "Winter"
-        print(f"\n🌨️  {season} Gardening Tips:")
-        print("- Plan your garden for next year")
-        print("- Order seeds from catalogs")
-        print("- Maintain your tools")
-        print("- Protect plants from frost")
-        print("- Start indoor herb gardens")
+        winter_advice()
     elif month in [3, 4, 5]:
-        season = "Spring"
-        print(f"\n🌱  {season} Gardening Tips:")
-        print("- Start planting cool-season crops")
-        print("- Prepare soil by adding compost")
-        print("- Begin seed starting indoors")
-        print("- Prune fruit trees")
-        print("- Clean up winter debris")
+        spring_advice()
     elif month in [6, 7, 8]:
-        season = "Summer"
-        print(f"\n☀️  {season} Gardening Tips:")
-        print("- Water regularly, especially in morning")
-        print("- Harvest vegetables and herbs")
-        print("- Deadhead flowers for continued blooming")
-        print("- Watch for pests and diseases")
-        print("- Plant heat-tolerant varieties")
+        summer_advice()
     else:  # Fall months [9, 10, 11]
-        season = "Fall"
-        print(f"\n🍂  {season} Gardening Tips:")
-        print("- Plant cool-season vegetables")
-        print("- Collect and save seeds")
-        print("- Rake and compost fallen leaves")
-        print("- Plant spring-flowering bulbs")
-        print("- Prepare garden beds for winter")
+        fall_advice()
 
 def get_monthly_advice(month):
     """Get specific advice for each month"""
@@ -76,8 +86,8 @@ def get_monthly_advice(month):
     else:
         print("Invalid month entered!")
 
-# TODO: Create a main function to organize the program flow better
-if __name__ == "__main__":
+def main():
+    """Main function to organize program flow"""
     get_season_advice()
     
     # Ask if user wants monthly advice too
@@ -87,3 +97,6 @@ if __name__ == "__main__":
         get_monthly_advice(month)
     
     print("\nHappy Gardening! 🌿")
+
+if __name__ == "__main__":
+    main()
