@@ -2,6 +2,9 @@
 """
 Garden Advice App - Provides gardening tips based on month and season
 A simple application for gardening enthusiasts around the world
+
+This module provides seasonal and monthly gardening advice through
+separate, well-organized functions for better maintainability.
 """
 
 # TODO: Consider adding plant-specific advice based on region/climate
