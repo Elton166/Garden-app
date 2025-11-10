@@ -11,7 +11,12 @@ separate, well-organized functions for better maintainability.
 # TODO: Add weather-based recommendations
 # TODO: Implement user preferences for gardening zones
 
-# Season mapping dictionary for better maintainability
+# ============================================================================
+# DATA STRUCTURES - Maintainable configuration for seasons and advice
+# ============================================================================
+
+# Season mapping dictionary - Maps month numbers (1-12) to season names
+# This replaces hardcoded month ranges for better maintainability
 SEASON_MAPPING = {
     1: "Winter", 2: "Winter", 12: "Winter",
     3: "Spring", 4: "Spring", 5: "Spring", 
@@ -129,7 +134,8 @@ def get_season_advice():
     except Exception as e:
         print(f"❌ An error occurred: {e}")
 
-# Detailed monthly advice dictionary
+# Detailed monthly advice dictionary - Provides specific guidance for each month
+# This replaces limited hardcoded advice with comprehensive monthly tasks
 MONTHLY_ADVICE = {
     1: {
         "name": "January",
